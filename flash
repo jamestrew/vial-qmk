@@ -1,0 +1,19 @@
+#!/bin/bash
+
+make cyboard/dactyl:jamestrew
+
+echo "flashing in 5 seconds"
+echo "put keyboard in bootloader"
+
+sleep 5
+echo "mounting..."
+sudo mount /dev/disk/by-label/RPI-RP2 /media/cyboard
+
+sleep 1
+echo "loading firmware..."
+cp ./cyboard_dactyl_jamestrew.uf2 /media/cyboard
+
+echo "rebooting keyboard..."
+sleep 8
+
+echo "DONE"
