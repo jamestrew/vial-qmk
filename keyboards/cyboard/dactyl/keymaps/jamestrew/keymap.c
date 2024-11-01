@@ -234,7 +234,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
     return state;
 }
 
-tap_dance_action_t tap_dance_actions_2[] = {
+tap_dance_action_t tap_dance_actions[] = {
     // Tap once for Escape, twice for Caps Lock
     [DANCE_0] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_CAPS),
 };
